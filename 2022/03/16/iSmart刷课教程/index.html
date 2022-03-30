@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>iSmart刷课教程 | Lztao</title><meta name="keywords" content="-刷课"><meta name="author" content="Lztao"><meta name="copyright" content="Lztao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="脚本转自github大神https:&#x2F;&#x2F;github.com&#x2F;Mufanc&#x2F;iSmartAuto2一、iSmart 课程自动姬效果展示 拥有更好的题型适应性，理论上适配所有客观题种类  提升稳定性，中途宕机概率大大降低  采用全新思路，相较自动化方案，效率提升超过 1000%    工作原理&amp;emsp;&amp;emsp;使用抓包工具分析客户端流量，可以得知 iSmart 客户端采用的判题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iSmart刷课教程">
+<meta property="og:url" content="http://example.com/2022/03/16/iSmart%E5%88%B7%E8%AF%BE%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Lztao">
+<meta property="og:description" content="脚本转自github大神https:&#x2F;&#x2F;github.com&#x2F;Mufanc&#x2F;iSmartAuto2一、iSmart 课程自动姬效果展示 拥有更好的题型适应性，理论上适配所有客观题种类  提升稳定性，中途宕机概率大大降低  采用全新思路，相较自动化方案，效率提升超过 1000%    工作原理&amp;emsp;&amp;emsp;使用抓包工具分析客户端流量，可以得知 iSmart 客户端采用的判题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-03-16T08:44:12.000Z">
+<meta property="article:modified_time" content="2022-03-30T11:15:59.626Z">
+<meta property="article:author" content="Lztao">
+<meta property="article:tag" content="-刷课">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/03/16/iSmart%E5%88%B7%E8%AF%BE%E6%95%99%E7%A8%8B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'iSmart刷课教程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-30 19:15:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pb.nichi.co/chicken-never-genuine" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Lztao</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">iSmart刷课教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-16T08:44:12.000Z" title="发表于 2022-03-16 16:44:12">2022-03-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-30T11:15:59.626Z" title="更新于 2022-03-30 19:15:59">2022-03-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="iSmart刷课教程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="脚本转自github大神https-github-com-Mufanc-iSmartAuto2"><a href="#脚本转自github大神https-github-com-Mufanc-iSmartAuto2" class="headerlink" title="脚本转自github大神https://github.com/Mufanc/iSmartAuto2"></a>脚本转自github大神<a target="_blank" rel="noopener" href="https://github.com/Mufanc/iSmartAuto2">https://github.com/Mufanc/iSmartAuto2</a></h1><h2 id="一、iSmart-课程自动姬"><a href="#一、iSmart-课程自动姬" class="headerlink" title="一、iSmart 课程自动姬"></a>一、iSmart 课程自动姬</h2><h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><ul>
+<li><p>拥有更好的题型适应性，理论上适配所有客观题种类</p>
+</li>
+<li><p>提升稳定性，中途宕机概率大大降低</p>
+</li>
+<li><p>采用全新思路，相较自动化方案，效率提升超过 1000%</p>
+</li>
+</ul>
+<p><img src="https://ptypic.oss-cn-zhangjiakou.aliyuncs.com/demo.png"></p>
+<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p>&amp;emsp;&amp;emsp;使用抓包工具分析客户端流量，可以得知 iSmart 客户端采用的判题方式为本地评判。也就是说会首先将题目和答案一同下载下来，完成答题后使用用户的计算机完成判分，最后将分数回传。这样一来就为爬取答案提供了可能，脚本会根据提供的用户名和密码完成登录，然后将习题的答案下载下来，为进一步地自动答题做好准备。</p>
+<p>&amp;emsp;&amp;emsp;一次偶然的机会，我发现 iSmart 客户端其实就是一个套壳的 Chromium，在其启动参数中加上 <code>--remote-debugging-port=9222</code> 参数后，其中页面便能够在 <a href="chrome://inspect">chrome:&#x2F;&#x2F;inspect</a> 中被调试：</p>
+<p><img src="https://ptypic.oss-cn-zhangjiakou.aliyuncs.com/inspect.png"></p>
+<p>&amp;emsp;&amp;emsp;进而，可以通过 Python 调用 <a target="_blank" rel="noopener" href="https://chromedevtools.github.io/devtools-protocol/">Chrome DevTools Protocol</a> （cdp），完成答案的自动提交</p>
+<h4 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h4><ul>
+<li><strong>Q：</strong> 既然是回传分数，那为何不用 Python 直接将分数上报，反而要走 cdp？</li>
+</ul>
+<blockquote>
+<p>&amp;emsp;&amp;emsp;上报分数的请求中有疑似 Hash 的字段 <code>ut</code>，且生成 <code>ut</code> 的方法 native，无法通过分析 JavaScript 得到（有木有大佬会 ollydbg 的来交个 PR）</p>
+</blockquote>
+<br/>
+
+<ul>
+<li><strong>Q：</strong> 使用这个脚本，会不会被检测到作弊？</li>
+</ul>
+<blockquote>
+<p>&amp;emsp;&amp;emsp;不排除这样的可能性，相较自动化而言，目前的方式提交的数据尚不完整（但成绩和学习时长会被记录），若是仔细比对，有可能会发现数据异常</p>
+</blockquote>
+<h3 id="二、使用方法"><a href="#二、使用方法" class="headerlink" title="二、使用方法"></a>二、使用方法</h3><h4 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h4><p>&amp;emsp;&amp;emsp;在合适的位置打开终端，然后执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Mufanc/iSmartAuto2.git</span><br><span class="line">cd iSmartAuto2</span><br></pre></td></tr></table></figure>
+
+<p>&amp;emsp;&amp;emsp;如果你是直接下载的源码压缩包，那么直接在解压后的文件夹内打开终端</p>
+<h4 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h4><p>&amp;emsp;&amp;emsp;在刚刚打开的终端中执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="配置-iSmart-客户端"><a href="#配置-iSmart-客户端" class="headerlink" title="配置 iSmart 客户端"></a>配置 iSmart 客户端</h4><p>&amp;emsp;&amp;emsp;修改 iSmart 的启动快捷方式，增加参数 <code>--remote-debugging-port=9222</code>（如下图），<strong>然后启动 iSmart 客户端并保持登录</strong></p>
+<p><img src="https://ptypic.oss-cn-zhangjiakou.aliyuncs.com/edit-lnk.png"></p>
+<h4 id="配置运行参数"><a href="#配置运行参数" class="headerlink" title="配置运行参数"></a>配置运行参数</h4><p>&amp;emsp;&amp;emsp;修改 <code>configs.yml</code> 中的账号和密码，保证与 iSmart 客户端中登录的账号一致，然后根据需要调整下方参数。在终端中执行 <code>py main.py -h</code> 可以查看更多帮助信息，这里列举几个常用命令</p>
+<ul>
+<li>列出所有课程和书籍的详细信息</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py main.py list -d</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<ul>
+<li>根据书籍 id 执行刷课</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py main.py flash -i 51627-7B6911511DB6B33638F6C58531D8FBD3</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<ul>
+<li>根据当前打开的页面执行刷课</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py main.py flash -c</span><br></pre></td></tr></table></figure>
+
+<p>注意如果打开的是「教材学习」页（如下图），只会刷打开的这一本书籍的任务</p>
+<p><img src="https://ptypic.oss-cn-zhangjiakou.aliyuncs.com/booklearn.png"></p>
+<p>而如果是在课程详情页面，则会对该课程下的所有书籍执行刷课：</p>
+<p><img src="https://ptypic.oss-cn-zhangjiakou.aliyuncs.com/current_course.png"></p>
+<h3 id="三、常见问题"><a href="#三、常见问题" class="headerlink" title="三、常见问题"></a>三、常见问题</h3><ul>
+<li>无法刷课？</li>
+</ul>
+<p>&amp;emsp;&amp;emsp;<strong>除非明确要求用户输入，本项目中的所有 Warning 都不会阻塞</strong>，如果你莫名其妙卡住了，控制台又没有要求你输入，那么大概率是 未适配你的课程&#x2F;环境没配置好&#x2F;网络问题</p>
+<ul>
+<li>父节点不存在？</li>
+</ul>
+<p>&amp;emsp;&amp;emsp;不会因为报这个 Warning 而卡住，如果脚本运行完之后你发现所有任务点确实都刷到了，那么完全不用管这个 Warning</p>
+<ul>
+<li>账号密码与登录不符？</li>
+</ul>
+<p>&amp;emsp;&amp;emsp;脚本判断的逻辑比较粗糙，弹警告只是提醒你务必确保 iSmart 客户端和 <code>configs.yml</code> 中是同一个账号，确定无误后大胆使用即可</p>
+<ul>
+<li><strong>提 issue 前请看这个 ↓↓↓</strong></li>
+</ul>
+<p>&amp;emsp;&amp;emsp;如果脚本出现异常，请检查你的课程和我学的是不是同一门（见上图），不同课程的参数可能会有细微差异，导致获取不到任务或者别的一些诡异现象。如果你有一定的爬虫开发经验，相信你自己可以通过该修改源代码很快解决这些问题；如果你只是想刷课，那么非常抱歉我并没有时间和精力去对每一本教材都做适配</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Lztao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://github.com/Mufanc/iSmartAuto2">https://github.com/Mufanc/iSmartAuto2</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Lztao</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%88%B7%E8%AF%BE/">-刷课</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/03/20/jdk%E5%AE%89%E8%A3%85/"><img class="prev-cover" src="https://s3.bmp.ovh/imgs/2022/03/30/9174fd1b520d0161.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">jdk安装</div></div></a></div><div class="next-post pull-right"><a href="/2022/03/13/java%E7%AC%94%E8%AE%B0/"><img class="next-cover" src="https://i.bmp.ovh/imgs/2022/03/30/30be371dd0c083eb.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">java笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pb.nichi.co/chicken-never-genuine" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Lztao</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Lzt00" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E8%BD%AC%E8%87%AAgithub%E5%A4%A7%E7%A5%9Ehttps-github-com-Mufanc-iSmartAuto2"><span class="toc-text">脚本转自github大神https:&#x2F;&#x2F;github.com&#x2F;Mufanc&#x2F;iSmartAuto2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81iSmart-%E8%AF%BE%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%A7%AC"><span class="toc-text">一、iSmart 课程自动姬</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-text">效果展示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Q-amp-A"><span class="toc-text">Q&amp;A</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">二、使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-text">下载源代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-iSmart-%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">配置 iSmart 客户端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BF%90%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="toc-text">配置运行参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">三、常见问题</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/30/HTMLcode/" title="HTMLcode"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTMLcode"/></a><div class="content"><a class="title" href="/2022/03/30/HTMLcode/" title="HTMLcode">HTMLcode</a><time datetime="2022-03-30T08:59:54.000Z" title="发表于 2022-03-30 16:59:54">2022-03-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/30/hello-world/" title="Hello World"><img src="https://s3.bmp.ovh/imgs/2022/03/30/0719c0db9df58634.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/03/30/hello-world/" title="Hello World">Hello World</a><time datetime="2022-03-30T04:16:40.582Z" title="发表于 2022-03-30 12:16:40">2022-03-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/20/jdk%E5%AE%89%E8%A3%85/" title="jdk安装"><img src="https://s3.bmp.ovh/imgs/2022/03/30/9174fd1b520d0161.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="jdk安装"/></a><div class="content"><a class="title" href="/2022/03/20/jdk%E5%AE%89%E8%A3%85/" title="jdk安装">jdk安装</a><time datetime="2022-03-20T10:11:35.000Z" title="发表于 2022-03-20 18:11:35">2022-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/16/iSmart%E5%88%B7%E8%AF%BE%E6%95%99%E7%A8%8B/" title="iSmart刷课教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="iSmart刷课教程"/></a><div class="content"><a class="title" href="/2022/03/16/iSmart%E5%88%B7%E8%AF%BE%E6%95%99%E7%A8%8B/" title="iSmart刷课教程">iSmart刷课教程</a><time datetime="2022-03-16T08:44:12.000Z" title="发表于 2022-03-16 16:44:12">2022-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/13/java%E7%AC%94%E8%AE%B0/" title="java笔记"><img src="https://i.bmp.ovh/imgs/2022/03/30/30be371dd0c083eb.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java笔记"/></a><div class="content"><a class="title" href="/2022/03/13/java%E7%AC%94%E8%AE%B0/" title="java笔记">java笔记</a><time datetime="2022-03-13T02:23:57.000Z" title="发表于 2022-03-13 10:23:57">2022-03-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By Lztao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
